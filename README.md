@@ -44,8 +44,8 @@ Floyd算法：
 所以假设Dis(i,j)为i 到 j 最短路径 对于每一个节点K 有应有Dis(i,k)+Dis(k,j) >= Dis(i,j)
 如果Dis(i,k)+Dis(k,j) < Dis(i,j)
 则 Dis(i,j) = Dis(i,k)+Dis(k,j);//dis(i,k)，Dis(k,j)也可能经过的很多节点
-//K的顺序让我很纠结firstV->endV
-//有些模糊想不清
+//D[v][w] < D[v][k] + D[k][v]但更新之后大小关系变化的怎么办
+ //存在K1使得  大小关系变化 即K1会更新 D[v][w]
 所有节点都访问完Dis(i,j)便是最短路径
 算法步骤：
 2D 邻接矩阵 e 
